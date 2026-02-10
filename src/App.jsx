@@ -15,6 +15,17 @@ export default function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
+  const savedTodos = localStorage.getItem("todos");
+  if (savedTodos) {
+    setTodos(JSON.parse(savedTodos));
+    }
+  }, []);
+
+  useEffect(() => {
+  localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
     if (loggedIn) loadTodos();
   }, [loggedIn]);
 
