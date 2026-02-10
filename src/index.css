@@ -247,6 +247,23 @@ button:hover {
     }
 }
 
+.btn-edit {
+  background-color: #3498db;
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+
 @media (max-width: 480px) {
     body {
         padding: 10px;

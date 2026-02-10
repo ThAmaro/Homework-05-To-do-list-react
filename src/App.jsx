@@ -46,12 +46,17 @@ export default function App() {
         <AuthSection onLogin={() => setLoggedIn(true)} />
       ) : (
         <>
-          <button onClick={() => {
-            document.cookie = "authToken=; Max-Age=0; path=/";
-            setLoggedIn(false);
-          }}>
-            Logout
-          </button>
+          <div className="logout-section">
+  <button
+    className="logout-btn"
+    onClick={() => {
+      document.cookie = "authToken=; Max-Age=0; path=/";
+      setLoggedIn(false);
+    }}
+  >
+    Logout
+  </button>
+</div>
 
           <TodoForm onAdd={addTodo} />
           <TodoList

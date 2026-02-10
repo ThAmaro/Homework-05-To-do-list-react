@@ -29,12 +29,17 @@ function TodoItem({ todo, onUpdate, onDelete }) {
       </div>
 
       <div className="todo-actions">
-        <button type="button" onClick={handleEdit}>
+        <button
+          type="button"
+          className="btn-edit"
+          onClick={handleEdit}
+        >
           Edit
         </button>
 
         <button
           type="button"
+          className="btn-delete"
           onClick={() => onDelete(todo.id)}
         >
           Delete
