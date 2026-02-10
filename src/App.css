@@ -26,7 +26,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* Títulos */
 h1 {
     text-align: center;
     color: #2c3e50;
@@ -208,61 +207,6 @@ button:hover {
     background-color: #c0392b;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 15px;
-        align-items: flex-start;
-        padding-top: 30px;
-    }
-    
-    .container {
-        padding: 30px;
-        margin: 0;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-    
-    .form-section {
-        padding: 20px;
-    }
-    
-    input, button {
-        width: 100%;
-        max-width: none;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-        padding-top: 20px;
-    }
-    
-    .container {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.6rem;
-    }
-    
-    h2 {
-        font-size: 1.3rem;
-    }
-    
-    button {
-        padding: 12px 20px;
-    }
-    
-    .form-section {
-        padding: 15px;
-    }
-}
 .message-box {
     margin-bottom: 20px;
     padding: 10px;
@@ -328,4 +272,59 @@ button:hover {
 .completed {
     text-decoration: line-through;
     color: #7f8c8d;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+    
+    .container {
+        padding: 30px;
+        margin: 0;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .form-section {
+        padding: 20px;
+    }
+    
+    input, button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        padding-top: 20px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    button {
+        padding: 12px 20px;
+    }
+    
+    .form-section {
+        padding: 15px;
+    }
 }
