@@ -192,21 +192,31 @@ button:hover {
   min-width: auto;
 }
 
-.btn-edit {
-    background-color: #3498db;
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
-.btn-edit:hover {
-    background-color: #2980b9;
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
 }
 
-.btn-delete {
-    background-color: #e74c3c;
+.todo-actions {
+  display: flex;
+  gap: 8px;
 }
 
-.btn-delete:hover {
-    background-color: #c0392b;
+.todo-actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  min-width: auto;
 }
+
 
 @media (max-width: 768px) {
     body {

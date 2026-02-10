@@ -1,24 +1,47 @@
-export default function TodoItem({ todo, onUpdate, onDelete }) {
-  function editTodo() {
+function TodoItem({ todo, onUpdate, onDelete }) {
+  function handleToggle() {
+    onUpdate(todo.id, { completed: !todo.completed });
+  }
+
+  function handleEdit() {
     const title = prompt("Edit title", todo.title);
+    if (!title) return;
+
     const description = prompt("Edit description", todo.description);
-    if (title) onUpdate(todo.id, { title, description });
+    if (!description) return;
+
+    onUpdate(todo.id, { title, description });
   }
 
   return (
-    <li>
-      <input
-        type="checkbox"
-        checked={todo.completed}
-        onChange={e => onUpdate(todo.id, { completed: e.target.checked })}
-      />
-      <strong>{todo.title}</strong> - {todo.description}
-      <button onClick={editTodo}>Edit</button>
-      <button onClick={() => onDelete(todo.id)}>Delete</button>
+    <li className="todo-item">
+      <div className="todo-left">
+        <input
+          type="checkbox"
+          checked={todo.completed}
+          onChange={handleToggle}
+        />
 
-      
+        <div className="todo-content">
+          <div className="todo-title">{todo.title}</div>
+          <div className="todo-description">{todo.description}</div>
+        </div>
+      </div>
 
+      <div className="todo-actions">
+        <button type="button" onClick={handleEdit}>
+          Edit
+        </button>
 
+        <button
+          type="button"
+          onClick={() => onDelete(todo.id)}
+        >
+          Delete
+        </button>
+      </div>
     </li>
   );
 }
+
+export default TodoItem;
